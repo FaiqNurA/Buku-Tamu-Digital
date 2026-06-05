@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Buku Tamu Digital – Seksi Inteldakim | Kantor Imigrasi Kelas I Non TPI Serang</title>
+<meta name="description" content="Buku Tamu Digital Seksi Intelijen dan Penindakan Keimigrasian, Kantor Imigrasi Kelas I Non TPI Serang">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0d2d5e;
+    --blue: #1a56a0;
+    --blue-light: #e8f0fb;
+    --blue-hover: #f0f6ff;
+    --gold: #c9a84c;
+    --text-primary: #0d2d5e;
+    --text-muted: #9aa5b4;
+    --border: #dde3ec;
+    --bg-page: #eef2f7;
+    --bg-card: #ffffff;
+  }
+
+  html, body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: var(--bg-page);
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  /* ══ HEADER ══ */
+  .header {
+    background: var(--navy);
+    width: 100%;
+    padding: 2.5rem 3rem 2rem;
+  }
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .logo-row img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .inst-info { text-align: left; }
+  .inst-kemen {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .inst-kantor {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+  }
+  .inst-seksi {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 4px;
+  }
+  .header-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    width: 100%;
+  }
+  .header-title { text-align: center; }
+  .header-title h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.01em;
+    margin-bottom: 8px;
+  }
+  .header-title .subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+  }
+  .gold-bar { height: 5px; background: var(--gold); width: 100%; }
+
+  /* ══ MAIN ══ */
+  .main {
+    flex: 1;
+    width: 100%;
+    padding: 2.5rem 3rem 3rem;
+    background: var(--bg-page);
+  }
+  .main-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  /* ══ LANG GRID — 3 kolom di desktop ══ */
+  .lang-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 2.5rem;
+  }
+
+  .lang-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+    padding: 2rem 1.5rem 1.75rem;
+    background: var(--bg-card);
+    border: 1.5px solid var(--border);
+    border-radius: 18px;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(13,45,94,0.07);
+    position: relative;
+    overflow: hidden;
+  }
+  .lang-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--blue);
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    border-radius: 0;
+  }
+  .lang-card:hover {
+    border-color: var(--blue);
+    background: var(--blue-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(26,86,160,0.16);
+  }
+  .lang-card:hover::after { transform: scaleX(1); }
+  .lang-card:active { transform: translateY(-2px); }
+
+  .flag-wrap {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: var(--blue-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    flex-shrink: 0;
+    transition: background 0.2s;
+  }
+  .lang-card:hover .flag-wrap { background: #d0e4f7; }
+
+  .lang-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+  .lang-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .lang-btn {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: var(--blue);
+    color: #fff;
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  .lang-btn svg {
+    width: 14px; height: 14px;
+    stroke: #fff; stroke-width: 2.5;
+    fill: none; stroke-linecap: round; stroke-linejoin: round;
+  }
+  .lang-card:hover .lang-btn { background: #0d2d5e; }
+
+  /* ══ FOOTER ══ */
+  .footer-divider { border: none; border-top: 1px solid var(--border); margin-bottom: 1.5rem; }
+  .footer-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    text-align: center;
+    line-height: 2;
+  }
+  .page-footer {
+    text-align: center;
+    padding: 1.25rem;
+    font-size: 11px;
+    color: #b0b8c4;
+    background: var(--bg-page);
+    border-top: 1px solid var(--border);
+  }
+
+  /* ══ TABLET (768px) ══ */
+  @media (max-width: 768px) {
+    .header { padding: 2rem 1.5rem 1.75rem; }
+    .main { padding: 2rem 1.5rem 2.5rem; }
+    .lang-grid { grid-template-columns: 1fr; gap: 14px; }
+    .lang-card {
+      flex-direction: row;
+      text-align: left;
+      padding: 1.25rem 1.5rem;
+      gap: 16px;
+    }
+    .lang-card::after { display: none; }
+    .lang-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: var(--blue);
+      transform: scaleY(0);
+      transition: transform 0.2s;
+    }
+    .lang-card:hover::before { transform: scaleY(1); }
+    .flag-wrap { width: 52px; height: 52px; font-size: 26px; flex-shrink: 0; border-radius: 12px; }
+    .lang-text { flex: 1; }
+    .lang-name { font-size: 16px; }
+    .lang-desc { font-size: 12px; }
+    .lang-btn { margin-top: 0; margin-left: auto; padding: 8px 16px; }
+    .inst-kantor { font-size: 15px; }
+    .header-title h1 { font-size: 22px; }
+  }
+
+  /* ══ MOBILE (480px) ══ */
+  @media (max-width: 480px) {
+    body { background: var(--navy); }
+    .header { padding: 1.5rem 1.25rem 1.5rem; background: var(--navy); }
+    .logo-row img { width: 56px; height: 56px; }
+    .inst-kemen { font-size: 10px; }
+    .inst-kantor { font-size: 13px; }
+    .inst-seksi { font-size: 11px; }
+    .header-title h1 { font-size: 19px; }
+    .header-title .subtitle { font-size: 11px; }
+    .main { padding: 1.5rem 1.25rem 2rem; background: #fff; }
+    .bg-page { background: #fff; }
+    .lang-card { border-radius: 12px; padding: 1rem 1.25rem; }
+    .flag-wrap { width: 44px; height: 44px; font-size: 22px; }
+    .lang-name { font-size: 15px; }
+    .lang-btn { font-size: 12px; padding: 7px 14px; }
+    .page-footer { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-row">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Logo_Kementrian_Imigrasi_dan_Pemasyarakatan_%282024%29.png"
+           alt="Logo Kementerian Imigrasi dan Pemasyarakatan Republik Indonesia">
+      <div class="inst-info">
+        <p class="inst-kemen">Kementerian Imigrasi dan Pemasyarakatan &nbsp;&bull;&nbsp; Republik Indonesia</p>
+        <p class="inst-kantor">Kantor Imigrasi Kelas I Non TPI Serang</p>
+        <p class="inst-seksi">Seksi Intelijen dan Penindakan Keimigrasian</p>
+      </div>
+    </div>
+    <hr class="header-divider">
+    <div class="header-title">
+      <h1>&#128210;&nbsp; Buku Tamu Digital</h1>
+      <p class="subtitle">Pilih bahasa formulir &nbsp;&bull;&nbsp; Select language &nbsp;&bull;&nbsp; 请选择语言</p>
+    </div>
+  </div>
+</div>
+
+<div class="gold-bar"></div>
+
+<div class="main">
+  <div class="main-inner">
+    <p class="section-label">Pilih Bahasa / Choose Language / 选择语言</p>
+
+    <div class="lang-grid">
+
+      <a class="lang-card" href="https://forms.gle/ugZuiMcBGTe5d7paA" target="_blank" rel="noopener">
+        <div class="flag-wrap">&#127470;&#127465;</div>
+        <div class="lang-text">
+          <div class="lang-name">Bahasa Indonesia</div>
+          <div class="lang-desc">Formulir Buku Tamu<br>Bahasa Indonesia</div>
+        </div>
+        <div class="lang-btn">
+          Isi Formulir
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </a>
+
+      <a class="lang-card" href="https://forms.gle/VhiVrt66XQBdfKdq6" target="_blank" rel="noopener">
+        <div class="flag-wrap">&#127468;&#127463;</div>
+        <div class="lang-text">
+          <div class="lang-name">English</div>
+          <div class="lang-desc">Visitor Book Form<br>English</div>
+        </div>
+        <div class="lang-btn">
+          Fill Form
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </a>
+
+      <a class="lang-card" href="https://forms.gle/DToX2q5NjDDDhuE8A" target="_blank" rel="noopener">
+        <div class="flag-wrap">&#127464;&#127475;</div>
+        <div class="lang-text">
+          <div class="lang-name">中文（普通话）</div>
+          <div class="lang-desc">访客登记表<br>中文版</div>
+        </div>
+        <div class="lang-btn">
+          填写表格
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </a>
+
+    </div>
+
+    <hr class="footer-divider">
+    <div class="footer-note">
+      Data kunjungan Anda dijaga kerahasiaannya sesuai ketentuan perundang-undangan yang berlaku &nbsp;&bull;&nbsp;
+      Your visit data is kept confidential in accordance with applicable laws and regulations &nbsp;&bull;&nbsp;
+      您的访问数据依据适用法律法规予以保密
+    </div>
+  </div>
+</div>
+
+<div class="page-footer">
+  &copy; 2025 &nbsp;&bull;&nbsp; Kantor Imigrasi Kelas I Non TPI Serang &nbsp;&bull;&nbsp; Seksi Intelijen dan Penindakan Keimigrasian
+</div>
+
+</body>
+</html>
